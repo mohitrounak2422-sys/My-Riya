@@ -2,6 +2,7 @@ const button = document.getElementById("openBtn");
 const envelope = document.getElementById("envelope");
 const typing = document.getElementById("typing");
 const nextBtn = document.getElementById("nextBtn");
+const music = document.getElementById("music");
 
 const message = `You are the most beautiful part of my life.
 
@@ -11,7 +12,7 @@ Thank you for coming into my life.
 
 No matter what happens...
 
-I will always love you.
+I will always stand beside you.
 
 Forever & Always ❤️`;
 
@@ -19,14 +20,15 @@ button.addEventListener("click", () => {
 
     button.style.display = "none";
 
+    if (music) {
+        music.play().catch(() => {});
+    }
+
     envelope.style.display = "block";
 
     setTimeout(() => {
-
         envelope.classList.add("open");
-
         typeLetter();
-
     }, 400);
 
 });
@@ -38,7 +40,6 @@ function typeLetter() {
     if (i < message.length) {
 
         typing.textContent += message.charAt(i);
-
         i++;
 
         setTimeout(typeLetter, 40);
@@ -77,16 +78,14 @@ I will always stand beside you.
 
 <br><br>
 
-❤️ I Love You Forever ❤️
+I promise to love you today, tomorrow and forever. ❤️
 
 </p>
 
 <br><br>
 
 <button onclick="location.reload()">
-
 Back ❤️
-
 </button>
 
 `;
