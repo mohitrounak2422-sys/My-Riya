@@ -5,54 +5,61 @@ box-sizing:border-box;
 }
 
 body{
-background:linear-gradient(135deg,#ff4b91,#ff7eb3);
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
+background:linear-gradient(-45deg,#ff4d8d,#ff7eb3,#ffb6d9,#ffd6e8);
+background-size:400% 400%;
+animation:bgMove 10s ease infinite;
 font-family:Arial,sans-serif;
 overflow:hidden;
 }
 
-.container{
-text-align:center;
-color:white;
-padding:20px;
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
+.container{
+text-align:center;
+padding:30px;
+color:white;
+}
 h1{
 font-size:42px;
-margin-bottom:20px;
+margin-bottom:15px;
 animation:glow 2s infinite alternate;
 }
 
 h2{
-font-size:55px;
+font-size:56px;
+letter-spacing:5px;
 margin-bottom:20px;
-letter-spacing:4px;
 }
 
 p{
-font-size:22px;
-margin-bottom:35px;
+font-size:20px;
 line-height:1.6;
+margin-bottom:30px;
+max-width:350px;
 }
 
 button{
 padding:15px 35px;
-font-size:22px;
+font-size:20px;
 border:none;
-border-radius:40px;
+border-radius:50px;
 background:white;
 color:#ff2d75;
-cursor:pointer;
 font-weight:bold;
-transition:.3s;
+cursor:pointer;
+transition:0.3s;
 }
 
 button:hover{
-transform:scale(1.1);
-background:#ffe6f1;
+transform:scale(1.08);
 }
 
 @keyframes glow{
@@ -60,51 +67,6 @@ from{
 text-shadow:0 0 10px white;
 }
 to{
-text-shadow:0 0 30px white,0 0 50px pink;
+text-shadow:0 0 25px white,0 0 45px pink;
 }
-}
-.floating-hearts{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-pointer-events:none;
-overflow:hidden;
-}
-/* Floating Hearts */
-
-.floating-hearts{
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    pointer-events:none;
-}
-
-.floating-hearts span{
-    position:absolute;
-    bottom:-50px;
-    color:#fff;
-    font-size:22px;
-    animation:float 10s linear infinite;
-    opacity:.8;
-}
-
-@keyframes float{
-    0%{
-        transform:translateY(0) rotate(0deg);
-        opacity:0;
-    }
-
-    20%{
-        opacity:1;
-    }
-
-    100%{
-        transform:translateY(-120vh) rotate(360deg);
-        opacity:0;
-    }
 }
