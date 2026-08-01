@@ -53,6 +53,42 @@ function typeLetter() {
 
 nextBtn.addEventListener("click", () => {
 
-    alert("❤️ To Be Continued... ❤️");
+document.querySelector(".container").innerHTML = `
+
+<h1>❤️ Our Story ❤️</h1>
+
+<p style="font-size:22px;line-height:1.8;max-width:700px;margin:auto;">
+
+Every day with you feels like the most beautiful dream. ❤️
+
+<br><br>
+
+Your smile is my peace.
+
+<br><br>
+
+Your happiness is my happiness.
+
+<br><br>
+
+No matter what happens,
+
+I will always stand beside you.
+
+<br><br>
+
+❤️ I Love You Forever ❤️
+
+</p>
+
+<br><br>
+
+<button onclick="location.reload()">
+
+Back ❤️
+
+</button>
+
+`;
 
 });
