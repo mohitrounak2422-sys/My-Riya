@@ -72,3 +72,39 @@ height:100%;
 pointer-events:none;
 overflow:hidden;
 }
+/* Floating Hearts */
+
+.floating-hearts{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.floating-hearts span{
+    position:absolute;
+    bottom:-50px;
+    color:#fff;
+    font-size:22px;
+    animation:float 10s linear infinite;
+    opacity:.8;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+    }
+}
