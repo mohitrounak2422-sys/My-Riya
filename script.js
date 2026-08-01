@@ -4,11 +4,16 @@ const typing = document.getElementById("typing");
 const nextBtn = document.getElementById("nextBtn");
 
 const message = `You are the most beautiful part of my life.
+
 Every smile of yours makes my world brighter.
+
 Thank you for coming into my life.
+
 No matter what happens...
+
 I will always love you.
-Forever & `Test ❤️`;
+
+Forever & Always ❤️`;
 
 button.addEventListener("click", () => {
 
