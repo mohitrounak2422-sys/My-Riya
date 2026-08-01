@@ -72,3 +72,78 @@ color:white;
 z-index:5;
 
 }
+/* ---------- HEADINGS ---------- */
+
+h1{
+    font-size:40px;
+    margin-bottom:15px;
+    text-shadow:0 0 15px rgba(255,255,255,.8);
+    animation:glow 2s infinite alternate;
+}
+
+h2{
+    font-size:58px;
+    letter-spacing:6px;
+    margin-bottom:20px;
+    color:#fff;
+}
+
+p{
+    font-size:19px;
+    line-height:1.8;
+    margin-bottom:35px;
+    color:#fff;
+}
+
+/* ---------- BUTTON ---------- */
+
+button{
+
+padding:16px 40px;
+
+border:none;
+
+border-radius:50px;
+
+background:white;
+
+color:#ff2d75;
+
+font-size:20px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.35s;
+
+box-shadow:0 10px 25px rgba(255,255,255,.35);
+
+}
+
+button:hover{
+
+transform:translateY(-3px) scale(1.05);
+
+background:#ffe7f1;
+
+}
+
+/* ---------- GLOW ---------- */
+
+@keyframes glow{
+
+from{
+
+text-shadow:0 0 10px white;
+
+}
+
+to{
+
+text-shadow:0 0 30px white,
+0 0 60px #ff9ac6;
+
+}
+
+}
