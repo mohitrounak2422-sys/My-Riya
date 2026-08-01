@@ -1,0 +1,66 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:linear-gradient(135deg,#ff4b91,#ff7eb3);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Arial,sans-serif;
+overflow:hidden;
+position:relative;
+}
+
+.container{
+text-align:center;
+color:white;
+padding:20px;
+z-index:2;
+}
+
+h1{
+font-size:42px;
+margin-bottom:20px;
+animation:glow 2s infinite alternate;
+}
+
+h2{
+font-size:55px;
+margin-bottom:20px;
+letter-spacing:4px;
+}
+
+p{
+font-size:22px;
+line-height:1.7;
+margin-bottom:30px;
+}
+
+button{
+padding:15px 35px;
+font-size:22px;
+border:none;
+border-radius:40px;
+background:white;
+color:#ff2d75;
+cursor:pointer;
+font-weight:bold;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+@keyframes glow{
+from{
+text-shadow:0 0 10px white;
+}
+to{
+text-shadow:0 0 25px white,0 0 45px pink;
+}
+}
