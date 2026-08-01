@@ -58,36 +58,75 @@ document.querySelector(".container").innerHTML = `
 
 <h1>❤️ Our Story ❤️</h1>
 
-<p style="font-size:22px;line-height:1.8;max-width:700px;margin:auto;">
+<p style="font-size:22px;line-height:2;max-width:700px;margin:auto;padding:20px;">
 
-Every day with you feels like the most beautiful dream. ❤️
-
-<br><br>
-
-Your smile is my peace.
+✨ Every moment with you has become a beautiful memory.
 
 <br><br>
 
-Your happiness is my happiness.
+🌸 Your smile gives me peace.
 
 <br><br>
 
-No matter what happens,
-
-I will always stand beside you.
+💖 Your love gives me strength.
 
 <br><br>
 
-I promise to love you today, tomorrow and forever. ❤️
+🌍 No matter where life takes us,
+I promise to stand beside you.
+
+<br><br>
+
+🤝 Together we can face every challenge.
+
+<br><br>
+
+❤️ Thank you for being the most beautiful part of my life.
+
+<br><br>
+
+✨ I Love You Today...
+Tomorrow...
+Forever... ❤️
 
 </p>
 
-<br><br>
+<br>
 
-<button onclick="location.reload()">
-Back ❤️
+<button id="finalBtn">
+Next ➜ ❤️
 </button>
 
 `;
+
+document.getElementById("finalBtn").addEventListener("click", () => {
+
+document.querySelector(".container").innerHTML = `
+
+<h1 style="font-size:48px;">💖 I Love You Riya 💖</h1>
+
+<p style="font-size:26px;line-height:2;">
+
+You are my today...
+
+You are my tomorrow...
+
+You are my forever. ❤️
+
+</p>
+
+<h2>🌹 Forever Together 🌹</h2>
+
+<br>
+
+<button onclick="location.reload()">
+
+🔄 Start Again ❤️
+
+</button>
+
+`;
+
+});
 
 });
