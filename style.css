@@ -63,3 +63,12 @@ to{
 text-shadow:0 0 30px white,0 0 50px pink;
 }
 }
+.floating-hearts{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
