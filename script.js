@@ -37,7 +37,7 @@ function typeLetter() {
 
     if (i < message.length) {
 
-        typing.innerHTML += message.charAt(i);
+        typing.textContent += message.charAt(i);
 
         i++;
 
