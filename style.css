@@ -70,3 +70,39 @@ to{
 text-shadow:0 0 25px white,0 0 45px pink;
 }
 }
+/* Floating Hearts */
+
+.hearts{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+pointer-events:none;
+z-index:1;
+}
+
+.hearts::before,
+.hearts::after{
+content:"❤️ 💖 💕 💗 ❤️ 💞";
+position:absolute;
+left:0;
+width:100%;
+font-size:28px;
+opacity:.25;
+animation:floatHearts 15s linear infinite;
+}
+
+.hearts::after{
+animation-delay:7s;
+}
+
+@keyframes floatHearts{
+0%{
+transform:translateY(100vh);
+}
+100%{
+transform:translateY(-120vh);
+}
+}
