@@ -33,3 +33,25 @@ heart.remove();
 }
 
 setInterval(createHeart,300);
+document.getElementById("openBtn").onclick = function(){
+
+let i = 0;
+
+document.querySelector(".container").innerHTML = `
+<h1>❤️ Our Memories ❤️</h1>
+<img id="slide" src="${photos[0]}">
+`;
+
+setInterval(function(){
+
+i++;
+
+if(i >= photos.length){
+i = 0;
+}
+
+document.getElementById("slide").src = photos[i];
+
+},2500);
+
+};
