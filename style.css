@@ -147,3 +147,46 @@ text-shadow:0 0 30px white,
 }
 
 }
+/* ===== Floating Hearts ===== */
+
+.hearts{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+z-index:1;
+}
+
+.hearts::before,
+.hearts::after{
+content:"❤️ 💖 💕 💗 💞 ❤️ 💖";
+position:absolute;
+left:0;
+width:100%;
+font-size:28px;
+opacity:.25;
+animation:floatHearts 14s linear infinite;
+}
+
+.hearts::after{
+animation-delay:7s;
+}
+
+@keyframes floatHearts{
+0%{
+transform:translateY(110vh);
+}
+100%{
+transform:translateY(-120vh);
+}
+}
+
+/* Content hamesha hearts ke upar rahe */
+
+.container{
+position:relative;
+z-index:10;
+}
