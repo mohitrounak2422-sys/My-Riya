@@ -1,219 +1,163 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-background:linear-gradient(135deg,#ff4d8d,#ff6fb5);
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-font-family:Arial,sans-serif;
-overflow:hidden;
-position:relative;
+    background:linear-gradient(135deg,#ff4fa3,#ff7ab6);
+    min-height:100vh;
+    overflow-x:hidden;
+    overflow-y:auto;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    font-family:Arial,sans-serif;
+    color:#fff;
+    position:relative;
 }
 
 .container{
-text-align:center;
-color:white;
-padding:20px;
-z-index:2;
+    width:100%;
+    max-width:900px;
+    text-align:center;
+    padding:60px 20px 80px;
+    z-index:2;
 }
 
 h1{
-font-size:42px;
-margin-bottom:20px;
-animation:glow 2s infinite alternate;
+    font-size:58px;
+    margin-bottom:20px;
+    text-shadow:0 0 25px rgba(255,255,255,.8);
 }
 
 h2{
-font-size:58px;
-margin-bottom:20px;
-letter-spacing:5px;
+    font-size:52px;
+    margin-bottom:20px;
+    letter-spacing:3px;
 }
 
 p{
-font-size:22px;
-line-height:1.7;
-margin-bottom:30px;
+    font-size:24px;
+    line-height:1.9;
+    margin-bottom:30px;
 }
 
 button{
-padding:15px 35px;
-font-size:22px;
-font-weight:bold;
-border:none;
-border-radius:40px;
-background:white;
-color:#ff2d75;
-cursor:pointer;
-transition:.3s;
-box-shadow:0 10px 25px rgba(0,0,0,.2);
+    padding:16px 45px;
+    font-size:28px;
+    font-weight:bold;
+    border:none;
+    border-radius:50px;
+    background:#fff;
+    color:#ff2d7a;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    transition:.3s;
 }
 
 button:hover{
-transform:scale(1.08);
+    transform:scale(1.08);
 }
 
-@keyframes glow{
-from{
-text-shadow:0 0 10px white;
-}
-to{
-text-shadow:0 0 25px white,0 0 45px pink;
-}
-}
-
-.hearts{
-position:absolute;
-width:100%;
-height:100%;
-overflow:hidden;
-pointer-events:none;
-}
-
-.hearts::before{
-content:"❤️ 💖 💕 ❤️ 💞 💓";
-position:absolute;
-bottom:-40px;
-font-size:38px;
-animation:floatHearts 10s linear infinite;
-}
-
-@keyframes floatHearts{
-0%{
-transform:translateY(0);
-opacity:1;
-}
-100%{
-transform:translateY(-120vh);
-opacity:0;
-}
-}
 .envelope{
-display:none;
-position:relative;
-width:320px;
-margin:30px auto;
-perspective:1000px;
+    width:540px;
+    max-width:90%;
+    margin:40px auto;
+    display:none;
+    position:relative;
 }
 
 .envelope-top{
-width:0;
-height:0;
-border-left:160px solid transparent;
-border-right:160px solid transparent;
-border-top:120px solid #ff8cb8;
-margin:auto;
-transform-origin:top;
-transition:1s;
+    width:0;
+    height:0;
+    border-left:270px solid transparent;
+    border-right:270px solid transparent;
+    border-bottom:170px solid #ff9bc8;
+    margin:auto;
+    transition:.8s;
+    transform-origin:top;
 }
 
 .letter{
-background:#fff;
-color:#ff2d75;
-padding:25px;
-border-radius:20px;
-margin-top:-2px;
-box-shadow:0 15px 40px rgba(0,0,0,.25);
-max-width:320px;
-margin-left:auto;
-margin-right:auto;
-transform:translateY(-20px);
-opacity:0;
-transition:1s;
+    background:#fff;
+    color:#ff2d7a;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+    transform:translateY(-20px);
 }
 
-.envelope.open .envelope-top{
-transform:rotateX(180deg);
-}
-
-.envelope.open .letter{
-transform:translateY(0);
-opacity:1;
-}
-
-.letter h3{
-font-size:32px;
-margin-bottom:20px;
+.open .envelope-top{
+    transform:rotateX(180deg);
 }
 
 #typing{
-font-size:20px;
-line-height:1.8;
-white-space:pre-line;
-min-height:220px;
+    white-space:pre-wrap;
+    line-height:2;
+    font-size:24px;
 }
 
 #nextBtn{
-display:none;
-margin-top:20px;
-}
-/* Mobile Responsive */
-
-@media(max-width:600px){
-
-h1{
-font-size:34px;
+    display:none;
+    margin-top:30px;
 }
 
-h2{
-font-size:48px;
+.hearts{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:1;
 }
 
-p{
-font-size:19px;
+.hearts::before{
+    content:"❤️ 💖 💕 💗 💞";
+    position:absolute;
+    width:100%;
+    font-size:42px;
+    animation:floatHearts 12s linear infinite;
+    opacity:.45;
 }
 
-button{
-font-size:20px;
-padding:14px 30px;
+@keyframes floatHearts{
+    0%{
+        transform:translateY(100vh);
+    }
+    100%{
+        transform:translateY(-120vh);
+    }
 }
 
-.envelope{
-width:280px;
-}
+@media(max-width:768px){
 
-.envelope-top{
-border-left:140px solid transparent;
-border-right:140px solid transparent;
-border-top:100px solid #ff8cb8;
-}
+    h1{
+        font-size:40px;
+    }
 
-.letter{
-max-width:280px;
-padding:20px;
-}
+    h2{
+        font-size:34px;
+    }
 
-.letter h3{
-font-size:28px;
-}
+    p{
+        font-size:18px;
+    }
 
-#typing{
-font-size:18px;
-min-height:180px;
-}
+    button{
+        font-size:22px;
+        padding:14px 35px;
+    }
 
-}
+    .envelope-top{
+        border-left:170px solid transparent;
+        border-right:170px solid transparent;
+        border-bottom:120px solid #ff9bc8;
+    }
 
-/* Smooth Fade */
-
-.container{
-animation:fadeIn 1s ease;
-}
-
-@keyframes fadeIn{
-
-from{
-opacity:0;
-transform:translateY(20px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
+    #typing{
+        font-size:18px;
+    }
 }
