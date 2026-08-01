@@ -64,3 +64,88 @@ to{
 text-shadow:0 0 25px white,0 0 45px pink;
 }
 }
+/* ===== Floating Hearts ===== */
+
+.hearts{
+position:absolute;
+width:100%;
+height:100%;
+overflow:hidden;
+top:0;
+left:0;
+pointer-events:none;
+}
+
+.hearts::before{
+content:"❤️ ❤️ 💖 💕 ❤️ 💖";
+position:absolute;
+font-size:28px;
+width:100%;
+animation:floatHearts 15s linear infinite;
+opacity:.35;
+}
+
+@keyframes floatHearts{
+0%{
+transform:translateY(100vh);
+}
+100%{
+transform:translateY(-120vh);
+}
+}
+
+/* ===== Envelope ===== */
+
+.envelope{
+display:none;
+width:260px;
+height:170px;
+margin:35px auto 0;
+position:relative;
+}
+
+.envelope-top{
+position:absolute;
+width:100%;
+height:100%;
+background:#ff7eb3;
+clip-path:polygon(0 0,100% 0,50% 50%);
+z-index:2;
+transition:.8s;
+}
+
+.letter{
+position:absolute;
+bottom:0;
+left:10px;
+width:240px;
+height:150px;
+background:white;
+border-radius:12px;
+padding:15px;
+color:#ff2d75;
+transform:translateY(130px);
+transition:1s;
+text-align:center;
+overflow:auto;
+}
+
+.envelope.open .envelope-top{
+transform:rotateX(180deg);
+transform-origin:top;
+}
+
+.envelope.open .letter{
+transform:translateY(-20px);
+}
+
+#typing{
+font-size:16px;
+line-height:1.6;
+min-height:90px;
+}
+
+#nextBtn{
+display:none;
+margin-top:15px;
+}
