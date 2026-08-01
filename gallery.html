@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Love ❤️</title>
 
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="song" autoplay loop>
+    <source src="music/song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+<h1>❤️ I Love You Riya ❤️</h1>
+
+<img id="slide" src="images/1.jpg">
+
+<p>
+You are my happiness, my smile, my everything. ❤️
+</p>
+
+</div>
+
+<script>
+let photos=[
+"images/1.jpg",
+"images/2.jpg",
+"images/3.jpg",
+"images/4.jpg",
+"images/5.jpg",
+"images/6.jpg",
+"images/7.jpg",
+"images/8.jpg"
+];
+
+let i=0;
+
+setInterval(()=>{
+i=(i+1)%photos.length;
+document.getElementById("slide").src=photos[i];
+},3000);
+</script>
+
+</body>
+</html>
