@@ -239,4 +239,34 @@ if (hearts) {
     }, 350);
 
 }
+function heartBlast(){
+
+for(let i=0;i<50;i++){
+
+const heart=document.createElement("div");
+
+heart.className="blast-heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left="50%";
+heart.style.top="50%";
+
+heart.style.setProperty("--x",
+(Math.random()*800-400)+"px");
+
+heart.style.setProperty("--y",
+(Math.random()*800-400)+"px");
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},1500);
+
+}
+
+}
 
