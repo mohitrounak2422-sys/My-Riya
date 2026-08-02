@@ -283,3 +283,17 @@ button:hover{
         transform:translateY(0);
     }
 }
+.story-card h1{
+    color:#ff2d7a;
+    font-size:42px;
+    margin-bottom:30px;
+    text-shadow:0 0 15px rgba(255,105,180,.4);
+}
+
+.story-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    white-space:nowrap;
+}
