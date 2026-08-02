@@ -171,4 +171,47 @@ ${frame === frames.length - 1 ? "Final Surprise ❤️" : "Next ❤️"}
     }
 
 }
+function showFinal() {
+
+document.querySelector(".container").innerHTML = `
+
+<div class="story-card">
+
+<h1>💖 Forever Together 💖</h1>
+
+<p style="font-size:24px;line-height:2;">
+
+🌹 You are my today...
+
+<br><br>
+
+🌹 You are my tomorrow...
+
+<br><br>
+
+🌹 You are my forever...
+
+<br><br>
+
+❤️ I Love You So Much Riya ❤️
+
+<br><br>
+
+✨ Thank you for making my life beautiful.
+
+</p>
+
+<br>
+
+<button onclick="location.reload()" class="story-btn">
+
+🔄 Start Again ❤️
+
+</button>
+
+</div>
+
+`;
+
+}
 
