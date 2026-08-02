@@ -350,3 +350,23 @@ rotate(720deg);
 }
 
 }
+.music-btn{
+position:fixed;
+top:20px;
+right:20px;
+width:60px;
+height:60px;
+border:none;
+border-radius:50%;
+font-size:28px;
+cursor:pointer;
+background:rgba(255,255,255,.25);
+backdrop-filter:blur(15px);
+box-shadow:0 8px 25px rgba(0,0,0,.2);
+z-index:9999;
+transition:.3s;
+}
+
+.music-btn:hover{
+transform:scale(1.1);
+}
