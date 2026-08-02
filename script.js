@@ -203,7 +203,7 @@ document.querySelector(".container").innerHTML = `
 
 <br>
 
-<button onclick="location.reload()" class="story-btn">
+<button onclick="restartLove()" class="story-btn">
 
 🔄 Start Again ❤️
 
