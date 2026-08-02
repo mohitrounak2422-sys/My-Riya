@@ -214,4 +214,29 @@ document.querySelector(".container").innerHTML = `
 `;
 
 }
+const hearts = document.getElementById("hearts");
+
+if (hearts) {
+
+    setInterval(() => {
+
+        const heart = document.createElement("span");
+
+        heart.innerHTML = ["❤️","💖","💕","💗","💓"][Math.floor(Math.random()*5)];
+
+        heart.style.left = Math.random() * 100 + "vw";
+
+        heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+        heart.style.fontSize = (18 + Math.random() * 20) + "px";
+
+        hearts.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 8000);
+
+    }, 350);
+
+}
 
