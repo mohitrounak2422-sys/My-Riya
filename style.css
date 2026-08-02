@@ -326,3 +326,27 @@ button:hover{
         opacity:0;
     }
 }
+.blast-heart{
+    position:fixed;
+    font-size:30px;
+    pointer-events:none;
+    z-index:9999;
+    animation:blast 1.5s linear forwards;
+}
+
+@keyframes blast{
+
+0%{
+opacity:1;
+transform:translate(0,0) scale(0.5);
+}
+
+100%{
+opacity:0;
+transform:
+translate(var(--x),var(--y))
+scale(2)
+rotate(720deg);
+}
+
+}
