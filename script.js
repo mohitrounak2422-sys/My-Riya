@@ -100,3 +100,75 @@ Continue ❤️
 document.getElementById("storyBtn").addEventListener("click",showFrames);
 
 }
+function showFrames() {
+
+    let frame = 0;
+
+    const frames = [
+
+        {
+            title: "💖 The Day You Came 💖",
+            text: "The day you came into my life, everything changed forever. Every moment since then has become a beautiful memory."
+        },
+
+        {
+            title: "🌸 Your Smile 🌸",
+            text: "Your smile is my favorite place. It has the power to make every bad day feel beautiful."
+        },
+
+        {
+            title: "🤍 My Forever 🤍",
+            text: "No matter what life brings, I promise I will always stand beside you, support you and love you forever."
+        },
+
+        {
+            title: "🌹 My Promise 🌹",
+            text: "If I could choose again and again, I would still choose you every single time. Forever is where I want to be with you."
+        }
+
+    ];
+
+    showFrame();
+
+    function showFrame() {
+
+        document.querySelector(".container").innerHTML = `
+
+<div class="story-card">
+
+<h2>${frames[frame].title}</h2>
+
+<p>${frames[frame].text}</p>
+
+<br>
+
+<button id="frameBtn" class="story-btn">
+
+${frame === frames.length - 1 ? "Final Surprise ❤️" : "Next ❤️"}
+
+</button>
+
+</div>
+
+`;
+
+        document.getElementById("frameBtn").onclick = () => {
+
+            frame++;
+
+            if (frame < frames.length) {
+
+                showFrame();
+
+            } else {
+
+                showFinal();
+
+            }
+
+        };
+
+    }
+
+}
+
