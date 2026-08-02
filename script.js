@@ -269,4 +269,14 @@ heart.remove();
 }
 
 }
+function restartLove(){
 
+heartBlast();
+
+setTimeout(()=>{
+
+location.reload();
+
+},1600);
+
+}
