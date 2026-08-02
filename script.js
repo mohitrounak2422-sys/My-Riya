@@ -280,3 +280,26 @@ location.reload();
 },1600);
 
 }
+const musicBtn = document.getElementById("musicBtn");
+
+if (musicBtn && music) {
+
+    musicBtn.innerHTML = "🔇";
+
+    musicBtn.onclick = () => {
+
+        if (music.paused) {
+
+            music.play();
+            musicBtn.innerHTML = "🔊";
+
+        } else {
+
+            music.pause();
+            musicBtn.innerHTML = "🔇";
+
+        }
+
+    };
+
+}
