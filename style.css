@@ -161,3 +161,37 @@ button:hover{
         font-size:18px;
     }
 }
+/* ===== Premium Story Frame ===== */
+
+.frame{
+    background: rgba(255,255,255,0.95);
+    color:#ff2e7a;
+    max-width:700px;
+    margin:40px auto;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+    animation:fadeIn .8s ease;
+}
+
+.frame h2{
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+.frame p{
+    font-size:22px;
+    line-height:1.9;
+    color:#ff2e7a;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
